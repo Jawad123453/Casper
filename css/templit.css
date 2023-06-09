@@ -1,0 +1,1070 @@
+:root{
+  --main-color: #19c8fa;
+  --transparent-color: rgb(15 116 143 / 70%);
+}
+*{
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+}
+body{
+  font-family: 'Work Sans', sans-serif;
+}
+.hero-img{
+  background-image: url("https://elzerowebschool.github.io/HTML_And_CSS_Template_Two/images/landing.jpg");
+  height:100vh;
+  width:100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: absolute;
+  z-index: -1;
+}
+.hero-img::before{
+  content: "";
+  background-color: rgba(0, 0, 0, 0.6);
+  height:100%;
+  position: absolute;
+  top:0;
+  width:100%;
+}
+/* strat of header */
+.header{
+  width:85%;
+  margin:0 auto;
+  padding:0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  z-index:2;
+}
+@media (max-width:1000px) {
+  .header{
+    width:75%;
+  }
+}
+.header::after{
+  content: "";
+  height: 1px;
+  width: 100%;
+  background-color: white;
+  position: absolute;
+  bottom:0;
+  z-index: -1;
+}
+.header .logo{
+  height:40px;
+}
+.header .main-list{
+  display: flex;
+}
+.header .main-list .fa-bars{
+  color: white;
+  font-size: 20px;
+  padding: 35px 0px;
+  display: none;
+}
+.header .main-list ul{
+  display: flex;
+  list-style: none;
+  margin: 0;
+}
+.header .main-list ul li{
+  padding: 35px 10px;
+  transition: 0.3s;
+}
+.header .main-list ul li:first-child{
+  border-bottom:1px solid  var(--main-color);
+  z-index: 1;
+}
+.header .main-list ul li:hover{
+  border-bottom:1px solid  var(--main-color);
+  z-index: 1;
+}
+.header .main-list .fa-magnifying-glass{
+  color: white;
+  font-size: 20px;
+  padding: 35px 10px;
+  margin-left: 40px;
+  position: relative;
+}
+.header .main-list .fa-magnifying-glass::after{
+  content: "";
+  position: absolute;
+  top:50%;
+  left: -10px;
+  transform: translate(0,-50%);
+  height:30%;
+  width:1px;
+  background-color: white;
+}
+.header .main-list ul li a{
+  color:white;
+  text-decoration: none;
+  font-size:13px;
+  transition: 0.3s;
+}
+.header .main-list ul li:first-child a{
+  color:var(--main-color);
+}
+.header .main-list ul li:hover a{
+  color:var(--main-color);
+}
+@media (max-width:797px) {
+  .header{
+    width:95%;
+  }
+  .header .main-list ul{
+    position: absolute;
+    left: 50%;
+    top: 90px;
+    transform: translate(-50%);
+    flex-direction: column;
+    margin: 0;
+    padding:0;
+    width: 100vw;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 1;
+    display: none;
+  }
+  .header .main-list ul li{
+    padding:15px;
+    padding-left: 20px;
+  }
+  .header .main-list ul li a{
+    font-size: 15px;
+  }
+  .header .main-list .fa-bars{
+    display: block;
+  }
+  .header .main-list:hover ul{
+    display: block;
+  }
+}
+/* end of header */
+.box{
+  width:50vw;
+  background-color: var(--transparent-color);
+  color:white;
+  position: absolute;
+  top:50%;
+  left: 0;
+  padding:50px 40px;
+  padding-right:0;
+  transform: translate(0%,-50%);
+}
+.box .container{
+  margin-left: 100px;
+  padding-top:0;
+  padding-bottom:0;
+  margin-top: 0;
+  margin-bottom: 0px;
+  margin-right: 30px;
+}
+@media (max-width:1300px) {
+  .box .container{
+    margin-left: 40px;
+    margin-right: 0;
+  }
+}
+@media (max-width:1200px) {
+  .box .container{
+    margin-left: 10px;
+    margin-right: 0;
+  }
+}
+.box h1{
+  font-size: 30px;
+  font-weight: normal;
+  margin:0;
+  padding-bottom:10px;
+  padding-top:0;
+}
+.box p{
+  line-height: 2;
+  font-size: 14px;
+  margin-top: 30px;
+}
+.fa-chevron-left{
+  font-weight: 800;
+  color:white;
+  font-size: 20px;
+  position: absolute;
+  top:50%;
+  transform: translate(0,-50%);
+  left:30px;
+}
+.fa-chevron-right{
+  font-weight: 800;
+  color:white;
+  font-size: 20px;
+  position: absolute;
+  top:50%;
+  transform: translate(0,-50%);
+  right:30px;
+}
+@media (max-width:797px) {
+  .box {
+    width:100vw;
+  }
+  .box p{
+    margin-top: 15px;
+  }
+  .fa-chevron-left:before,
+  .fa-chevron-right:before{
+    display:none;
+  }
+}
+.points{
+  display: flex;
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  gap:10px;
+}
+.circl-1,
+.circl-2{
+  height:20px;
+  width: 20px;
+  border-radius: 50%;
+  border: 1px solid white;
+}
+.fullcircl{
+  height:20px;
+  width: 20px;
+  border-radius: 50%;
+  background-color: var(--main-color);
+}
+/* end of part-1 */
+/* start of part-2 */
+.Services{
+  margin-top:100vh;
+}
+.maintitle{
+  text-align: center;
+}
+.maintitle h1{
+  font-weight: normal;
+  margin-bottom:70px;
+  position: relative;
+}
+.maintitle h1::after{
+  content: "";
+  height:15px;
+  width: 15px;
+  position: absolute;
+  top:55px;
+  left:50%;
+  transform: translate(-50%);
+  border-radius: 50%;
+  border: 2px solid black;
+  z-index: 1;
+  background-color: white;
+}
+.maintitle h1::before{
+  content: "";
+  height:2px;
+  width: 100px;
+  position: absolute;
+  top:calc(55px + 7.5px);
+  left:50%;
+  transform: translate(-50%,50%);
+  background-color: black;
+}
+.maintitle p{
+  color:rgb(83, 83, 83);
+  font-size: 17px;
+  line-height: 1.8;
+}
+.container{
+    margin: 100px;
+}
+.col{
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(450px,1fr));
+  gap:30px;
+  margin-bottom: 20px;
+}
+.seat{
+  display: flex;
+  gap:40px;
+}
+.seat i{
+  font-size: 45px;
+}
+.seat h3{
+  margin: 0;
+  color:var(--main-color);
+  font-size: 21px;
+  font-weight: 600;
+}
+.seat p{
+  line-height: 1.8;
+  color:rgb(83, 83, 83);
+  font-size: 17px;
+}
+@media (max-width:797px) {
+  .container{
+    margin: 0px;
+  }
+  .seat{
+    flex-direction: column;
+    text-align: center;
+    gap:20px;
+    max-width: 100vw;
+  }
+  .maintitle p{
+    margin-bottom: 50px;
+  }
+}
+/* end of part-2 */
+/* start of part-3 */
+.next-img{
+  height:90vh;
+  width:100%;
+  background-image: url("	https://elzerowebschool.github.io/HTML_And_CSS_Template_Two/images/design-features.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  overflow: hidden;
+  z-index: -1;
+}
+.next-img::before{
+  content: "";
+  background-color: rgba(0, 0, 0, 0.6);
+  height:100%;
+  position: absolute;
+  top:0;
+  width:100%;
+}
+.next-img img{
+  position: absolute;
+  bottom:-80px;
+  left: 15%;
+}
+.next-box{
+  background-color: var(--transparent-color);
+  color:white;
+  width: 50%;
+  position: absolute;
+  right: 0;
+  top:50%;
+  transform: translate(0,-50%);
+}
+.contaner{
+  margin-left: 10%;
+  margin-bottom: 20px;
+}
+.next-box h2{
+  font-weight: normal;
+  padding-top:40px;
+  margin-bottom: 20px;
+}
+.next-box-listul{
+  display: flex;
+  align-items: center;
+  gap:25px;
+}
+.next-box-listul h4{
+  font-weight: normal;
+}
+@media (max-width:797px) {
+  .next-img img{
+    display: none;
+  }
+  .next-box{
+    width: 100%;
+  }
+}
+/* end of part-3 */
+.PORTFOLIO{
+  margin-top:100px;
+}
+.PORTFOLIO .PORTFOLIO-list ul{
+  margin-top:100px;
+  display: flex;
+  list-style: none;
+  justify-content: center;
+  align-items: center;
+}
+.PORTFOLIO .PORTFOLIO-list ul li{
+  padding:10px;
+  margin-left: 5px;
+}
+.PORTFOLIO .PORTFOLIO-list ul li:first-child{
+  background-color: var(--main-color);
+  color:white;
+}
+.hard-one{
+  margin-top:75px;
+}
+.hard-one .col2{
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px,1fr));
+}
+.hard-one .col2 .set{
+  padding:0;
+  margin:0;
+  width: 100%;
+  margin-bottom: 5px;
+  position: relative;
+  overflow: hidden;
+}
+.hard-one .col2 .set img{
+  height:250px;
+  width:100%;
+  padding:0;
+  margin:0;
+  transition: 0.3s;
+}
+.hard-one .col2 .set .images-text{
+  background-color: white;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  height: 30%;
+  position: absolute;
+  bottom:-100%;
+  transition: 0.3s;
+}
+.hard-one .col2 .set .images-text h3{
+  padding:0;
+  margin:0;
+  font-size: 15px;
+  margin-left: 20px;
+}
+.hard-one .col2 .set .images-text h3:last-child{
+  color:var(--main-color);
+}
+.hard-one .col2 .set:hover img{
+  transform: scale(1.1) rotate(5deg);
+}
+.hard-one .col2 .set:hover .images-text{
+  bottom:0;
+}
+.PORTFOLIO .more{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 30px;
+  margin-bottom: 100px;
+}
+.PORTFOLIO .more button{
+  background-color: var(--main-color);
+  color:white;
+  border: none;
+  padding:15px 20px;
+}
+.viduo{
+  position: relative;
+}
+.viduo::before{
+  content: "";
+  background-color: rgba(0, 0, 0, 0.6);
+  height:100%;
+  position: absolute;
+  top:0;
+  width:100%;
+}
+.viduo video{
+  width: 100%;
+}
+.viduo-text{
+  width: 100%;
+  position: absolute;
+  top:50%;
+  transform: translate(0,-50%);
+  background-color: var(--transparent-color);
+  text-align: center;
+  z-index: 1;
+  padding:30px;
+}
+.viduo-text h3,
+.viduo-text h4{
+  color:white;
+  font-weight: normal;
+
+}
+.viduo-text h3{
+  font-size: 25px;
+}
+.viduo-text button{
+  background-color: black;
+  color:white;
+  padding:10px 15px;
+}
+/* start of 5 */
+.ABOUT-US{
+  margin-top: 100px;
+  margin-bottom: 50px;
+}
+.ABOUT-US-contect{
+  margin-top:300px;
+  background-image: url("https://elzerowebschool.github.io/HTML_And_CSS_Template_Two/images/stats.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width:100%;
+  position: relative;
+}
+.ABOUT-US-img{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: -1;
+  position: absolute;
+  top:0%;
+  left: 50%;
+  transform: translate(-50%,-60%);
+  width:100%;
+}
+.ABOUT-US-img img{
+  max-width: 100%;
+}
+.ABOUT-US-contect::before{
+  content: "";
+  background-color: rgba(0, 0, 0, 0.6);
+  height:100%;
+  position: absolute;
+  top:0;
+  width:100%;
+}
+.about-boxes{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding:75px;
+  z-index: 1;
+}
+.about-boxes .p1{
+  display: flex;
+  flex-wrap: wrap;
+  z-index: 1;
+}
+.about-boxes .boxa{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  height:250px;
+  width:280px;
+  background-color:var(--transparent-color);
+  z-index: 1;
+  flex-wrap: wrap;
+  color:white;
+}
+.about-boxes .boxa .icon{
+  background-color: black;
+  padding:10px;
+  border-radius: 50%;
+  margin-top: 30px;
+}
+.about-boxes .boxa h1{
+  font-size: 50px;
+  margin-bottom:0;
+  margin-top: 10px;
+}
+.about-boxes .boxa h4{
+  font-weight: normal;
+  margin-top:0;
+}
+.about-TS{
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 100px;
+}
+@media (max-width:797px) {
+  .about-TS{
+    flex-direction: column;
+  }
+}
+.skills,
+.testimonials{
+  text-align: center;
+  flex-basis: 40%;
+}
+.testimonials{
+  position: relative;
+}
+.skills h3,
+.testimonials h3{
+  font-weight: normal;
+  margin-bottom: 30px;
+}
+.skills p,
+.testimonials p{
+  color:#333;
+  font-size: 17px;
+  line-height: 1.8;
+}
+.testimonials-photo-1,
+.testimonials-photo-2{
+  display: flex;
+  text-align: start;
+  align-items: center;
+  margin-top: 50px;
+}
+.testimonials-photo-1 img,
+.testimonials-photo-2 img{
+  border-radius: 50%;
+  height:100px;
+  width:100px;
+  margin-right: 30px;
+}
+@media (max-width:1000px){
+  .about-TS{
+  text-align: center;
+  flex-basis: 100%;
+  flex-direction: column;
+  padding:5%;
+}
+}
+@media (max-width:797px) {
+  .testimonials-photo-1,
+  .testimonials-photo-2{
+    flex-direction: column;
+    text-align: center;
+    width:90%;
+    margin: auto;
+  }
+  .testimonials-photo-1 img,
+  .testimonials-photo-2 img{
+    margin-top: 30px;
+    margin-right: 0px;
+  }
+  .testimonials-photo-1{
+    margin-bottom: 30px;
+  }
+}
+.testimonials-photo-2{
+  margin-bottom: 100px;
+}
+.testimonials-photo-text{
+  border-bottom: 1px solid rgb(173, 173, 173);
+}
+.testimonials-photo-text p:last-child{
+  color:rgb(173, 173, 173);
+  text-align: end;
+  font-size: 15px;
+}
+.testimonials ul{
+  margin: 0;
+}
+.testimonials .points{
+  bottom: 50px;
+}
+.testimonials .circl-1,
+.testimonials .circl-2{
+  height:15px;
+  width: 15px;
+  border: 1px solid rgb(173, 173, 173);
+}
+.testimonials .fullcircl{
+  height:15px;
+  width: 15px;
+}
+@media (max-width:797px) {
+  .testimonials ul{
+    margin: 0;
+    padding:0;
+  }
+}
+.skills-bar{
+  text-align: start;
+  margin-top:75px;
+}
+.skills-bar .bar h3{
+  font-weight: normal;
+  margin-bottom:10px;
+}
+.normal-bar{
+  width:100%;
+  height:30px;
+  background-color: #dedadc;
+}
+.skills-bar .bar{
+  margin-bottom: 50px;
+}
+.skills-bar .bar span{
+  background-color: var(--main-color);
+  height: 100%;
+  display: block;
+  position: relative;
+  transition: 0.3s linear;
+}
+.skills-bar .bar span::before{
+  content: attr(data-width);
+  position: absolute;
+  top:calc(-100% + -10px);
+  left: 100%;
+  transform: translate(-50%);
+  z-index: 1;
+  background-color: black;
+  border-radius: 5px;
+  color:white;
+  padding:5px;
+}
+.skills-bar .bar span::after{
+  content: " ";
+  position: absolute;
+  top:calc(-100% + 15px);
+  left: 100%;
+  transform: translate(-50%);
+  border-style: solid;
+  border-width: 10px;
+  border-color:black transparent transparent transparent;
+  z-index: 1;
+}
+.ABOUT-US-lastthing{
+  margin-top:50px;
+  width:100%;
+  background-image: url("	https://elzerowebschool.github.io/HTML_And_CSS_Template_Two/images/quote.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: -1;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color:white;
+  padding:5% 10%;
+  text-align: center;
+}
+.ABOUT-US-lastthing::after{
+  content: "";
+  background-color: rgba(0, 0, 0, 0.8);
+  height:100%;
+  position: absolute;
+  top:0;
+  width:100%;
+}
+.ABOUT-US-lastthing h1,
+.ABOUT-US-lastthing h4{
+  color:white;
+  z-index: 1;
+  margin: 10px;
+  font-weight: normal;
+}
+.ABOUT-US-lastthing span{
+  user-select: none;
+}
+/* end of 5 */
+/* start of 6 */
+.PRICING{
+  margin-top: 100px;
+  padding-bottom:100px;
+}
+.PRICING-boxes{
+  width:90%;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap:30px;
+  margin-bottom: 30px;
+}
+.price-box{
+  text-align: center;
+  flex:1;
+  background-color: rgb(250, 250, 250);
+}
+@media (max-width:1200px) {
+  .price-box{
+    flex-basis: 25%;
+  }
+}
+@media (max-width:1000px) {
+  .price-box{
+    flex-basis: 33%;
+  }
+}
+@media (max-width:560px) {
+  .price-box{
+    flex-basis: 50%;
+  }
+}
+.price-box .box-1{
+  border-top: 1px solid var(--main-color);
+  border-bottom: 1px solid var(--main-color);
+  padding:40px 60px;
+}
+.price-box .box-1 h3{
+  font-weight: normal;
+}
+.price-box .box-1 span{
+  font-size:60px;
+  position: relative;
+  font-weight: bold;
+}
+.price-box .box-1 span::before{
+  content: attr(data-currt);
+  position: absolute;
+  top:0;
+  left: -25px;
+  transform: translate(-50%,-50%);
+  font-size: 25px;
+  font-weight: normal;
+}
+.price-box .box-1 span::after{
+  content: attr(data-time);
+  position: absolute;
+  bottom:0;
+  right: -75px;
+  transform: translate(-50%,-50%);
+  font-size: 20px;
+}
+.price-box .box-2{
+  margin:0;
+  padding:0;
+}
+.price-box .box-2 ul{
+  list-style: none;
+  text-align: center;
+  margin: auto;
+  padding:0;
+}
+.price-box .box-2 ul li{
+  padding: 20px;
+  position: relative;
+}
+.price-box .box-2 ul li::after{
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%);
+  background-color: var(--main-color);
+  width:150px;
+  height:1px;
+}
+.price-box .box-2 h1{
+  font-weight: normal;
+  font-size: 16px;
+  padding:20px;
+  margin: 0;
+}
+.price-box .box-3{
+  padding-top:40px;
+  padding-bottom:40px;
+  border-top: 1px solid var(--main-color);
+}
+.price-box .box-3 button{
+  background-color: transparent;
+  color:purple;
+  border: 1px solid var(--main-color);
+  padding:20px 30px;
+}
+.price-last{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.price-last h4{
+  font-size: 20px;
+  font-weight: normal;
+}
+.price-last button{
+  padding:15px 30px;
+  background-color: var(--main-color);
+  border: none;
+  color:white;
+}
+.last-img{
+  width:100%;
+  background-image: url("	https://elzerowebschool.github.io/HTML_And_CSS_Template_Two/images/subscribe.jpg");
+  position: relative;
+  z-index: -1;
+  margin-bottom: 100px;
+}
+.last-img::after{
+  content: "";
+  background-color: rgba(0, 0, 0, 0.6);
+  height:100%;
+  position: absolute;
+  top:0;
+  width:100%;
+}
+.last-img p{
+  z-index: 1;
+  line-height: 1.8;
+}
+.last-img .last-img-text{
+  width:80%;
+  margin:auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap:50px;
+  color:white;
+  z-index: 1;
+  padding:60px 20px;
+}
+.last-img-text form{
+  display: flex;
+  align-items: center;
+  text-align: center;
+  z-index: 1;
+  border: 1px solid white;
+}
+.last-img-text form i{
+  padding:20px;
+  margin-left: 0;
+}
+.last-img-text form .first-form{
+  background-color: transparent;
+  border: none;
+  color:white;
+  padding:15px;
+  z-index: 1;
+}
+.last-img-text form input:last-child{
+  padding:20px;
+  background-color: var(--main-color);
+  color:white;
+  z-index: 1;
+  border: none;
+  margin-left: 10px;
+}
+@media (max-width:797px) {
+  .last-img .last-img-text{
+    flex-direction: column;
+  }
+  .last-img-text form input:last-child{
+    padding:10px;
+  }
+  .last-img-text form {
+    width:50%;
+    margin:auto;
+    display: none;
+  }
+  .last-img-text form .first-form{
+    padding:10px;
+  }
+}
+/* end of 6 */
+/* between */
+.CONTACT-US-parts{
+  width:75%;
+  margin:auto;
+  display: flex;
+  justify-content: space-between;
+  margin-top:100px;
+  margin-bottom:100px;
+  gap:50px;
+}
+.CONTACT-1 {
+  height:100%;
+  flex:1;
+}
+.CONTACT-1 form{
+  display: flex;
+  flex-direction: column;
+  gap:20px;
+}
+.CONTACT-1 form input,
+.CONTACT-1 form textarea{
+  padding:15px;
+  border: 1px solid rgb(173, 173, 173);
+}
+.CONTACT-1 form button{
+  background-color: var(--main-color);
+  color:white;
+  align-self: end;
+  border: none;
+  padding:20px;
+}
+.CONTACT-2{
+  display: flex;
+  flex-direction: column;
+}
+@media (max-width:797px) {
+  .CONTACT-US-parts{
+    width:95%;
+    flex-direction: column;
+    text-align: center;
+  }
+}
+.CONTACT-2 h3{
+  margin:0;
+  margin-bottom: 30px;
+  font-weight: normal;
+}
+.CONTACT-2 h4{
+  font-weight: normal;
+  margin:0;
+  margin-top: 10px;
+  color:rgb(173, 173, 173)
+}
+.CONTACT-2 .Get{
+  margin-bottom: 100px;
+}
+/* between */
+/* start of 7 */
+.footer{
+  width:100%;
+  background-image: url("	https://elzerowebschool.github.io/HTML_And_CSS_Template_Two/images/subscribe.jpg");
+  position: relative;
+  z-index: -1;  
+  display: flex;
+  flex-direction: column;
+  gap:50px;
+  text-align: center;
+  align-items: center;
+  padding:50px;
+  padding-bottom:25px;
+  color:white;
+}
+.footer::before{
+  content: "";
+  background-color: rgba(0, 0, 0, 0.6);
+  height:100%;
+  position: absolute;
+  top:0;
+  width:100%;
+}
+.footer img{
+  z-index: 1;
+}
+.footer h3{
+  z-index: 1;
+  font-size: 18px;
+  position: relative;
+  font-weight: normal;
+  /* border-bottom: 1px solid white; */
+}
+.footer h3::after{
+  z-index: 1;
+  content: "";
+  position: absolute;
+  bottom:-25px;
+  left:50%;
+  height:2px;
+  width:150%;
+  transform: translate(-50%,-50%);
+  background-color: white;
+}
+.footer ul{
+  list-style: none;
+  display:flex;
+  align-items: center;
+  justify-content: space-between;
+  gap:40px;
+  z-index: 1;
+  padding:0;
+}
+.footer h4{
+  z-index: 1;
+}
+.footer h4 span{
+  color:var(--main-color)
+}
+/* end of 7 */
